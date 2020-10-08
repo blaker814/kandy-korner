@@ -19,7 +19,6 @@ export const EmployeeProvider = (props) => {
             },
             body: JSON.stringify(employee)
         })
-            .then(getEmployees)
     }
 
     return (

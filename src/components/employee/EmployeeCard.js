@@ -1,9 +1,12 @@
-export const EmployeeCard = ({ employee }) => {
+import React from "react"
+import "./Employee.css"
+
+export const EmployeeCard = ({ employee }) => (
     <section className="employee">
         <h3>{employee.name}</h3>
-        <p>{employee.manager}</p>
-        <p>{employee.fullTime}</p>
-        <p>{employee.rate}</p>
-        <p>{employee.location.name}</p>
+        <p>Manager: {employee.isManager ? "Yes" : "No"}</p>
+        <p>Full Time: {employee.isFullTime ? "Yes" : "No"}</p>
+        <p>Hourly Rate: ${employee.rate}</p>
+        <p>Location: {employee.location.name}</p>
     </section>
-}
+)
