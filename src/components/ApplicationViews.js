@@ -8,7 +8,7 @@ import { ProductProvider } from "./product/ProductProvider"
 import { EmployeeProvider } from "./employee/EmployeeProvider"
 import { EmployeeForm } from "./employee/EmployeeForm"
 import { EmployeeList } from "./employee/EmployeeList"
-import { CustomerCandyProvider } from "./order/CustomerCandyProvider"
+import { OrderProvider } from "./order/OrderProvider"
 import { OrderList } from "./order/OrderList"
 
 export const ApplicationViews = (props) => {
@@ -25,11 +25,11 @@ export const ApplicationViews = (props) => {
             </LocationProvider>
             
             <ProductProvider>
-                <CustomerCandyProvider>
+                <OrderProvider>
                     <Route path="/products">
                         <ProductList />
                     </Route>
-                </CustomerCandyProvider>
+                </OrderProvider>
             </ProductProvider>
 
             <EmployeeProvider>
@@ -46,11 +46,11 @@ export const ApplicationViews = (props) => {
                 </LocationProvider>
             </EmployeeProvider>
 
-            <CustomerCandyProvider>
-                <Route exact path="/customerCandy">
+            <OrderProvider>
+                <Route exact path="/orders">
                     <OrderList />
                 </Route>
-            </CustomerCandyProvider>
+            </OrderProvider>
         </>
     )
 }
